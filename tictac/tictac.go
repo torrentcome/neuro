@@ -19,7 +19,7 @@ func main() {
 
 	// my tictac
 	var myTicTac TicTac
-	myTicTac.plateau = [][]string{[]string{"_", "_", "_"}, []string{"_", "_", "_"}, []string{"_", "_", "_"}}
+	myTicTac.plateau = [][]string{{"_", "_", "_"}, {"_", "_", "_"}, {"_", "_", "_"}}
 	myTicTac.turn = 1
 
 	fmt.Print("Enter player 1: ")
@@ -71,7 +71,7 @@ func returnUser(t TicTac) string {
 }
 
 func askSelection(s string) int {
-	var goodInt int;
+	var goodInt int
 	fmt.Printf("selection : %s =", s)
 	fmt.Scanf("%d ", &goodInt)
 	if goodInt == 0 || goodInt == 1 || goodInt == 2 {
