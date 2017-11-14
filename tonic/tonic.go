@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"fmt"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	. "../model"
 )
 
@@ -14,6 +14,11 @@ var (
 )
 
 func main() {
+	initDB()
+	initWS()
+}
+
+func initWS() {
 	var r = gin.Default()
 	v1 := r.Group("/api/v1/")
 	{
