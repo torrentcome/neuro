@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27531b4b-c911-419f-905c-46969c8146ca" name="Default" comment="">
+    <list default="true" id="27531b4b-c911-419f-905c-46969c8146ca" name="Default" comment="(tonic) router + context">
+      <change beforePath="" afterPath="$PROJECT_DIR$/model/tictac.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/tictac/tictac.go" afterPath="$PROJECT_DIR$/tictac/tictac.go" />
       <change beforePath="$PROJECT_DIR$/tonic/tonic.go" afterPath="$PROJECT_DIR$/tonic/tonic.go" />
@@ -15,13 +16,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tonic.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+              <folding>
+                <element signature="e#14#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perceptron.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/perceptron/perceptron.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tonic.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tonic/tonic.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="435">
+              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
-                <element signature="e#14#59#0" expanded="true" />
+                <element signature="e#14#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tictac.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/tictac.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tictac.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tictac/tictac.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#14#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,9 +89,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main.go" />
-        <option value="$PROJECT_DIR$/tictac/tictac.go" />
         <option value="$PROJECT_DIR$/src/perceptron/perceptron.go" />
         <option value="$PROJECT_DIR$/tonic/tonic.go" />
+        <option value="$PROJECT_DIR$/model/TicTac.go" />
+        <option value="$PROJECT_DIR$/model/tictac.go" />
+        <option value="$PROJECT_DIR$/tictac/tictac.go" />
       </list>
     </option>
   </component>
@@ -89,17 +136,18 @@
             <path>
               <item name="try" type="b2602c69:ProjectViewProjectNode" />
               <item name="try" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="try" type="b2602c69:ProjectViewProjectNode" />
+              <item name="try" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="try" type="b2602c69:ProjectViewProjectNode" />
               <item name="try" type="462c0819:PsiDirectoryNode" />
-              <item name="tictac" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="try" type="b2602c69:ProjectViewProjectNode" />
-              <item name="try" type="462c0819:PsiDirectoryNode" />
-              <item name="tonic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -127,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Application.tonic.go">
+  <component name="RunManager" selected="Go Application.tictac.go">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="try" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -168,8 +216,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Go Application.tonic.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Application.tictac.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Application.tictac.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Application.tonic.go" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +256,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="(cleanup) format" />
     <MESSAGE value="(tonic) add gin tonic" />
-    <option name="LAST_COMMIT_MESSAGE" value="(tonic) add gin tonic" />
+    <MESSAGE value="(tonic) router + context" />
+    <option name="LAST_COMMIT_MESSAGE" value="(tonic) router + context" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -234,7 +283,7 @@
         <state relative-caret-position="180">
           <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
-            <element signature="e#14#60#0" expanded="false" />
+            <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -243,9 +292,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="e#20#50#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -254,7 +301,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#60#0" expanded="false" />
+            <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -263,9 +310,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <element signature="e#20#50#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -274,7 +319,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#60#0" expanded="false" />
+            <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -283,9 +328,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#20#50#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -293,43 +336,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/perceptron/perceptron.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <element signature="e#20#50#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="23" column="58" lean-forward="true" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        <state relative-caret-position="360">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
-            <element signature="e#14#60#0" expanded="false" />
+            <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tictac/tictac.go">
+    <entry file="file://$PROJECT_DIR$/model/tictac.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tonic/tonic.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state relative-caret-position="435">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
-            <element signature="e#14#59#0" expanded="true" />
+            <element signature="e#14#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tictac/tictac.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>

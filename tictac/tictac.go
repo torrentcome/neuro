@@ -4,14 +4,8 @@ import (
 	"fmt"
 	"bufio"
 	"os"
+	. "../model"
 )
-
-type TicTac struct {
-	plateau [][] string
-	turn    int
-	player1 string
-	player2 string
-}
 
 func main() {
 	// entry
@@ -19,21 +13,24 @@ func main() {
 
 	// my tictac
 	var myTicTac TicTac
-	myTicTac.plateau = [][]string{{"_", "_", "_"}, {"_", "_", "_"}, {"_", "_", "_"}}
-	myTicTac.turn = 1
+	myTicTac.Plateau = [][]string{{"_", "_", "_"}, {"_", "_", "_"}, {"_", "_", "_"}}
+	myTicTac.Turn = 1
 
 	fmt.Print("Enter player 1: ")
 	scanner.Scan()
-	myTicTac.player1 = scanner.Text()
+	myTicTac.Player1 = scanner.Text()
 
 	fmt.Print("Enter player 2: ")
 	scanner.Scan()
-	myTicTac.player2 = scanner.Text()
+	myTicTac.Player2 = scanner.Text()
 
-	fmt.Printf("%v vs %v \n\n", myTicTac.player1, myTicTac.player2)
+	fmt.Printf("%v vs %v \n\n", myTicTac.Player1, myTicTac.Player2)
 	var selector = switchTurn(myTicTac)
 
-	fmt.Print("Possible value for row && col -> 0 1 2 \n\n")
+	fmt.Print("Possible value for row && col \n")
+	fmt.Print("1 2 3 \n")
+	fmt.Print("2 _ _ \n")
+	fmt.Print("3 _ _ \n\n")
 
 	for {
 		var row, col int
@@ -41,8 +38,8 @@ func main() {
 		row = askSelection("row")
 		col = askSelection("col")
 
-		if isValid(myTicTac.plateau[row][col]) {
-			myTicTac.plateau[row][col] = selector
+		if isValid(myTicTac.Plateau[row][col]) {
+			myTicTac.Plateau[row][col] = selector
 			show(myTicTac)
 
 			if hasWin(myTicTac, selector) {
@@ -54,7 +51,7 @@ func main() {
 				os.Exit(2)
 			}
 
-			myTicTac.turn ++
+			myTicTac.Turn ++
 			selector = switchTurn(myTicTac)
 		} else {
 			fmt.Print("\n INVALID SELECTION \n")
@@ -63,10 +60,10 @@ func main() {
 }
 
 func returnUser(t TicTac) string {
-	if t.turn%2 != 0 {
-		return t.player1
+	if t.Turn%2 != 0 {
+		return t.Player1
 	} else {
-		return t.player2
+		return t.Player2
 	}
 }
 
@@ -74,8 +71,8 @@ func askSelection(s string) int {
 	var goodInt int
 	fmt.Printf("selection : %s =", s)
 	fmt.Scanf("%d ", &goodInt)
-	if goodInt == 0 || goodInt == 1 || goodInt == 2 {
-		return goodInt
+	if goodInt == 1 || goodInt == 2 || goodInt == 3 {
+		return goodInt - 1
 	} else {
 		return askSelection(s)
 	}
@@ -91,7 +88,7 @@ func isValid(s string) bool {
 }
 
 func switchTurn(t TicTac) string {
-	if t.turn%2 != 0 {
+	if t.Turn%2 != 0 {
 		return "o"
 	} else {
 		return "x"
@@ -99,9 +96,9 @@ func switchTurn(t TicTac) string {
 }
 
 func complete(t TicTac) bool {
-	for i := 0; i < len(t.plateau); i++ {
-		for j := 0; j < len(t.plateau[i]); j++ {
-			if t.plateau[i][j] == "_" {
+	for i := 0; i < len(t.Plateau); i++ {
+		for j := 0; j < len(t.Plateau[i]); j++ {
+			if t.Plateau[i][j] == "_" {
 				return false
 			}
 		}
@@ -110,10 +107,10 @@ func complete(t TicTac) bool {
 }
 
 func show(t TicTac) bool {
-	for i := 0; i < len(t.plateau); i++ {
+	for i := 0; i < len(t.Plateau); i++ {
 		fmt.Print("[ ")
-		for j := 0; j < len(t.plateau[i]); j++ {
-			fmt.Print(t.plateau[i][j])
+		for j := 0; j < len(t.Plateau[i]); j++ {
+			fmt.Print(t.Plateau[i][j])
 			fmt.Print(" ")
 		}
 		fmt.Print("]")
@@ -123,7 +120,7 @@ func show(t TicTac) bool {
 }
 
 func hasWin(t TicTac, char string) bool {
-	plateau := t.plateau
+	plateau := t.Plateau
 	// horizontal
 	if (plateau[0][0] == char && plateau[0][1] == char && plateau[0][2] == char) ||
 		(plateau[1][0] == char && plateau[1][1] == char && plateau[1][2] == char) ||
